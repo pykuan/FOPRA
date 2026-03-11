@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{subcaption}
+
+\begin{document}
+
+    \begin{center}
+        \large{\bf{Anisotropic flow analysis with two- and multiparticle correlation techniques}}\\
+    \end{center}
+
+    \begin{center}
+        {\small\today}
+    \end{center}
+
+    %1
+    \textbf{Question 1:} {\it Plot the long $2\theta/\omega$ scan of sample B in a logarithmic scale. Which peaks can you identify?} 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig_01.png}
+        \caption{$2\theta/\omega$ wide range scan of sample B}
+        \label{fig:fig_01}
+    \end{figure}
+
+    The peaks correspond to Bragg reflections of the $ZnO$ film and the $Al_2O_3$ substrate.
+    
+    \begin{itemize}
+        \item $2\theta = 34.5^{\circ} \rightarrow ZnO$ (002)
+        \item $2\theta = 41.7^{\circ} \rightarrow Al_2O_3$ (006)
+        \item $2\theta = 72.6^{\circ} \rightarrow ZnO$ (004)
+        \item $2\theta = 90.8^{\circ} \rightarrow Al_2O_3$ (0012)
+        \item $2\theta = 125.3^{\circ} \rightarrow ZnO$ (006)
+    \end{itemize}
+
+    %2
+    \vspace{0.5cm}
+    \textbf{Question 2:} {\it Estimate the layer thickness of sample A by using Equation (41).} 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig_02.png}
+        \caption{$2\theta/\omega$ scan of sample A and Gaussian fit}
+        \label{fig:fig_02}
+    \end{figure}
+
+    According to equation (41): 
+    \begin{equation}
+        l_z=\frac{0.9\lambda}{\Delta(2\theta)\cos\theta}
+        \label{eq41}
+    \end{equation}
+
+    and $FWHM \approx 0.0011$ from Gaussian fit, layer thickness $lz$ is estimated as 130 nm.
+
+    %3
+    \vspace{0.5cm}
+    \textbf{Question 3:} {\it Determine the layer thickness of sample B by using Equations (41) and (42). Compare the obtained values! Conclusion? } 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig_03.png}
+        \caption{$2\theta/\omega$ scan of sample B and Gaussian fit}
+        \label{fig:fig_03}
+    \end{figure}
+
+    According to equation (41) (equation (\ref{eq41}) in this report) and $FWHM \approx 0.0003$ from Gaussian fit, layer thickness $lz$ is estimated as 452 nm.
+    Equation (42):
+
+    \begin{equation}
+        l_z=\frac{\lambda\sin\theta}{\Delta(\theta)\sin 2\theta}
+        \label{eq42}
+    \end{equation}
+    
+    requires the distance between secondary maxima. However, in the measured $2\theta/\omega$ scan of sample B, only a single peak is visible and no clear secondary maxima can be identified. Therefore, equation (42) cannot be applied to this dataset.
+
+    This suggests that the thickness estimate from equation (41) is the only accessible one for sample B from the present measurement.
+
+    %4
+    \vspace{0.5cm}
+    \textbf{Question 4:} {\it Estimate the screw-type dislocation densities of samples A and B and their lateral crystallite size. Compare the structural quality of both samples.} 
+    By assuming that the broadening of rocking curve is only caused by limited size, lower limit for the lateral crystallite size $l_\parallel$ can be estimated by:
+    \begin{equation}
+        l_\parallel = \frac{0.9 \lambda}{\Delta \omega \sin \theta}
+        \label{eq43}
+    \end{equation}
+
+   \begin{figure}[H]
+        \centering
+        \begin{subfigure}{0.48\textwidth}
+            \centering
+            \includegraphics[width=0.75\textwidth]{fig_04_A.png}
+            \label{fig:fig_04_A}
+        \end{subfigure}
+        \begin{subfigure}{0.48\textwidth}
+            \centering
+            \includegraphics[width=0.75\textwidth]{fig_04_B.png}
+            \label{fig:fig_04_B}
+        \end{subfigure}
+        \caption{$\omega$ scan of sample A and B and Gaussian fit}
+        \label{fig:fig_04}
+    \end{figure}
+
+    With FWHM 0.003 for sample A and 0.00016 for sample B, lateral sizes $l_\parallel$ are 149 nm and 2854 nm for sample A and B respectively.
+    
+    By assuming that the broadening of the rocking curves result only from tilt and twist, equation (45) suggests the relation between screw-type dislocation density $\rho_{screw}$ and FWHM $\Delta \omega_{002}$:
+    \begin{equation}
+        \rho_{screw} = \frac{\Delta \omega_{002}^2}{4.35 |\mathbf{b}_screw|^2}
+        \label{eq45}
+    \end{equation}
+    with the Burger vector $\mathbf{b}_{screw}=[001]$ which equals to lattice constance $c = 5.2024 \AA$. $\rho_{screw}$ are $8.38 \times 10^{12} m^{-2}$ and $2.29 \times 10^{10} m^{-2}$. 
+    
+    Therefore, sample B has a much larger lateral crystallite size and a much lower screw-type dislocation density than sample A, indicating a better structural quality.
+
+    
+
+    
+ 
+
+
+\end{document}
