@@ -21,7 +21,7 @@
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{fig_01.png}
-        \caption{$2\theta/\omega$ wide range scan of sample B}
+        \caption{$2\theta/\omega$ wide range scan of sample B (002)}
         \label{fig:fig_01}
     \end{figure}
 
@@ -41,7 +41,7 @@
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{fig_02.png}
-        \caption{$2\theta/\omega$ scan of sample A and Gaussian fit}
+        \caption{$2\theta/\omega$ scan of sample A (002) and Gaussian fit}
         \label{fig:fig_02}
     \end{figure}
 
@@ -59,7 +59,7 @@
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{fig_03.png}
-        \caption{$2\theta/\omega$ scan of sample B and Gaussian fit}
+        \caption{$2\theta/\omega$ scan of sample B (002) and Gaussian fit}
         \label{fig:fig_03}
     \end{figure}
 
@@ -96,7 +96,7 @@
             \includegraphics[width=0.75\textwidth]{fig_04_B.png}
             \label{fig:fig_04_B}
         \end{subfigure}
-        \caption{$\omega$ scan of sample A and B and Gaussian fit}
+        \caption{$\omega$ scan of sample A and B (002) and Gaussian fit}
         \label{fig:fig_04}
     \end{figure}
 
@@ -104,17 +104,45 @@
     
     By assuming that the broadening of the rocking curves result only from tilt and twist, equation (45) suggests the relation between screw-type dislocation density $\rho_{screw}$ and FWHM $\Delta \omega_{002}$:
     \begin{equation}
-        \rho_{screw} = \frac{\Delta \omega_{002}^2}{4.35 |\mathbf{b}_screw|^2}
+        \rho_{screw} = \frac{\Delta \omega_{002}^2}{4.35 |\mathbf{b}_{screw}|^2}
         \label{eq45}
     \end{equation}
     with the Burger vector $\mathbf{b}_{screw}=[001]$ which equals to lattice constance $c = 5.2024 \AA$. $\rho_{screw}$ are $8.38 \times 10^{12} m^{-2}$ and $2.29 \times 10^{10} m^{-2}$. 
     
     Therefore, sample B has a much larger lateral crystallite size and a much lower screw-type dislocation density than sample A, indicating a better structural quality.
 
-    
+    %5
+    \vspace{0.5cm}
+    \textbf{Question 5:} {\it Estimate the edge-type dislocation density of sample A.} 
 
-    
- 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig_05.png}
+        \caption{$\omega$ scan of sample A (101) and Gaussian fit}
+        \label{fig:fig_05}
+    \end{figure}
+
+
+    By assuming that the broadening of the rocking curves result only from tilt and twist, equation (46) suggests the relation between edge-type dislocation density $\rho_{edge}$ and FWHM $\Delta \omega_{101}$:
+    \begin{equation}
+        \rho_{edge} = \frac{\Delta \omega_{101}^2}{4.35 |\mathbf{b}_{edge}|^2}
+        \label{eq46}
+    \end{equation}
+    with the Burger vector $\mathbf{b}_{edge}=[110]$ which equals to lattice constance $a = 3.2475 \AA$. However, no broadening is identified in this dataset, which gives 0 FWHM. This suggests that sample A has zero edge-type dislocation density.
+
+    %6
+    \vspace{0.5cm}
+    \textbf{Question 6:} {\it Illustrate graphically which lattice planes are associated with the (112) and the (113) reflexes respectively. Verify the epitaxial relation of ZnO on a c-plane sapphire substrate.} 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig_06.png}
+        \caption{$\phi$ scan of sample A $ZnO$ (112) and $Al_2O_3$ (113)}
+        \label{fig:fig_06}
+    \end{figure}
+
+    The $\phi$ scans of the ZnO (112) and $Al_2O_3$ (113) reflections show six peaks separated by $60^\circ$, indicating the hexagonal symmetry of both the film and the substrate. The ZnO peaks are shifted by approximately $30^\circ$ with respect to the sapphire peaks.
+
 
 
 \end{document}
