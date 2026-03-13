@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib
+# matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from scipy.optimize import curve_fit
@@ -28,11 +30,13 @@ def fit(qx, qz, intensity):
 
 filepath = 'data/SampleB_ZnO_205_RSM.txt'
 
-a = 0.32475
-c = 0.52024 #nm
+# a = 0.32475
+# c = 0.52024 #nm
+wavelength = 1.54059 *10**-10
+h, k, l = 2, 0, 5
 
-qx = np.loadtxt(filepath, skiprows=2, encoding='utf-8')[:, 0] *a
-qz = np.loadtxt(filepath, skiprows=2, encoding='utf-8')[:, 1] *c
+qx = np.loadtxt(filepath, skiprows=2, encoding='utf-8')[:, 0] /(2*np.pi/wavelength)
+qz = np.loadtxt(filepath, skiprows=2, encoding='utf-8')[:, 1] /(2*np.pi/wavelength)
 intensity = np.loadtxt(filepath, skiprows=2, encoding='utf-8')[:, 2]
 
 # A, x0, z0, sig_x, sig_z, theta = fit(qx, qz, intensity)
@@ -51,12 +55,19 @@ intensity = np.loadtxt(filepath, skiprows=2, encoding='utf-8')[:, 2]
 
 QX, QZ = np.meshgrid(np.linspace(qx.min(), qx.max(), 200), np.linspace(qz.min(), qz.max(), 200))
 intensity_grid = griddata((qx, qz), intensity, (QX, QZ), method='linear')
-intensity_grid = np.log10(intensity_grid/np.nanmax(intensity_grid))
+intensity_ratio = intensity_grid / np.nanmax(intensity_grid)
+intensity_ratio = np.where(np.isnan(intensity_ratio) | (intensity_ratio <= 0), np.nan, intensity_ratio)
+intensity_grid = np.log10(intensity_ratio)
 qx0 = qx[np.argmax(intensity)]
 qz0 = qz[np.argmax(intensity)]
 
+a = (1/qx0) * (wavelength*h/np.sqrt(3))
+c = (1/qz0) * (wavelength*l/2)
+print(a)
+print(c)
+
 plt.contourf(QX, QZ, intensity_grid, levels=20, cmap='viridis')
-plt.scatter(qx0, qz0, color='red', label='peak')
+plt.scatter(qx0, qz0, color='red', label='peak', s=1)
 plt.colorbar(label='log10(I/Imax)')
 plt.xlabel('qx')
 plt.ylabel('qz')
