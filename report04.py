@@ -55,5 +55,16 @@ def Calculate_dxy_dislocation(filepath, omega, domega, theta):
     plt.show()
     plt.close()
     
-Calculate_dxy_dislocation(filepath='data/SampleA_ZnO_002_omega.txt', omega=17.1784, domega=0.5, theta=34.4326/2 *np.pi/180)
-Calculate_dxy_dislocation(filepath='data/SampleB_ZnO_002_omega.txt', omega=17.2270, domega=0.05, theta=34.4498/2 *np.pi/180)
+    return FWHM_omega, lxy, dislocation_screw
+    
+FWHM_omega_A, lxy_A, dislocation_screw_A = Calculate_dxy_dislocation(filepath='data/SampleA_ZnO_002_omega.txt', omega=17.1784, domega=0.5, theta=34.4326/2 *np.pi/180)
+FWHM_omega_B, lxy_B, dislocation_screw_B = Calculate_dxy_dislocation(filepath='data/SampleB_ZnO_002_omega.txt', omega=17.2270, domega=0.05, theta=34.4498/2 *np.pi/180)
+
+with open('value.tex', 'a') as f:
+    f.write('\n')
+    f.write(rf'\newcommand\reportFOURfwhmA{{{FWHM_omega_A:.4f}}}' + '\n')
+    f.write(rf'\newcommand\reportFOURlzA{{{lxy_A*10**9:.3f}}}' + '\n')
+    f.write(rf'\newcommand\reportFOURdsA{{{dislocation_screw_A*10**12}}}' + '\n')
+    f.write(rf'\newcommand\reportFOURfwhmB{{{FWHM_omega_B:.4f}}}' + '\n')
+    f.write(rf'\newcommand\reportFOURlzB{{{lxy_B*10**9:.3f}}}' + '\n')
+    f.write(rf'\newcommand\reportFOURdsB{{{dislocation_screw_B*10**12}}}' + '\n')

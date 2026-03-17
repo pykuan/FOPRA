@@ -37,9 +37,9 @@ lz = 0.9*wavelength/(FWHM_2theta*np.cos(theta/2))
 print(f'lz = {lz}')
 
 #eq.42
-FWHM_theta = FWHM_2theta /2 #2theta->theta
-lz = wavelength*np.sin(theta/2)/(FWHM_theta*np.sin(2*theta))
-print(f'lz = {lz}') #wrong!
+# FWHM_theta = FWHM_2theta /2 #2theta->theta
+# lz = wavelength*np.sin(theta/2)/(FWHM_theta*np.sin(2*theta))
+# print(f'lz = {lz}') #wrong!
 
 lower_boundary = 0 #int(len(intensity)/2-200)
 upper_boundary = len(intensity) #int(len(intensity)/2+200)
@@ -54,3 +54,7 @@ plt.savefig('fig_03.png')
 plt.show()
 plt.close()
 
+with open('value.tex', 'a') as f:
+    f.write('\n')
+    f.write(rf'\newcommand\reportTHREEfwhm{{{FWHM_2theta:.4f}}}' + '\n')
+    f.write(rf'\newcommand\reportTHREElz{{{lz*10**9:.3f}}}' + '\n')

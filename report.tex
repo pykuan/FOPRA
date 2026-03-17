@@ -7,6 +7,7 @@
 \usepackage{subcaption}
 
 \begin{document}
+\input{value}
 
     \begin{center}
         \large{\bf{Anisotropic flow analysis with two- and multiparticle correlation techniques}}\\
@@ -22,17 +23,17 @@
         \centering
         \includegraphics[width=0.75\textwidth]{fig_01.png}
         \caption{$2\theta/\omega$ wide range scan of sample B (002)}
-        \label{fig:fig_01}
+        \label{fig_01}
     \end{figure}
 
     The peaks correspond to Bragg reflections of the $ZnO$ film and the $Al_2O_3$ substrate.
     
     \begin{itemize}
-        \item $2\theta = 34.5^{\circ} \rightarrow ZnO$ (002)
-        \item $2\theta = 41.7^{\circ} \rightarrow Al_2O_3$ (006)
-        \item $2\theta = 72.6^{\circ} \rightarrow ZnO$ (004)
-        \item $2\theta = 90.8^{\circ} \rightarrow Al_2O_3$ (0012)
-        \item $2\theta = 125.3^{\circ} \rightarrow ZnO$ (006)
+        \item $2\theta = \reportONEangi^{\circ} \rightarrow ZnO$ (002)
+        \item $2\theta = \reportONEangii^{\circ} \rightarrow Al_2O_3$ (006)
+        \item $2\theta = \reportONEangiii^{\circ} \rightarrow ZnO$ (004)
+        \item $2\theta = \reportONEangix^{\circ} \rightarrow Al_2O_3$ (0012)
+        \item $2\theta = \reportONEangx^{\circ} \rightarrow ZnO$ (006)
     \end{itemize}
 
     %2
@@ -42,7 +43,7 @@
         \centering
         \includegraphics[width=0.75\textwidth]{fig_02.png}
         \caption{$2\theta/\omega$ scan of sample A (002) and Gaussian fit}
-        \label{fig:fig_02}
+        \label{fig_02}
     \end{figure}
 
     According to equation (41): 
@@ -51,7 +52,7 @@
         \label{eq41}
     \end{equation}
 
-    and $FWHM \approx 0.0011$ from Gaussian fit, layer thickness $lz$ is estimated as 130 nm.
+    and $FWHM \approx \reportTWOfwhm$ from Gaussian fit, layer thickness $\reportTWOlz$ is estimated as 130 nm.
 
     %3
     \vspace{0.5cm}
@@ -60,10 +61,10 @@
         \centering
         \includegraphics[width=0.75\textwidth]{fig_03.png}
         \caption{$2\theta/\omega$ scan of sample B (002) and Gaussian fit}
-        \label{fig:fig_03}
+        \label{fig_03}
     \end{figure}
 
-    According to equation (41) (equation (\ref{eq41}) in this report) and $FWHM \approx 0.0003$ from Gaussian fit, layer thickness $lz$ is estimated as 452 nm.
+    According to equation (41) (equation (\ref{eq41}) in this report) and $FWHM \approx \reportTHREEfwhm$ from Gaussian fit, layer thickness $\reportTHREElz$ is estimated as 452 nm.
     Equation (42):
 
     \begin{equation}
@@ -89,15 +90,15 @@
         \begin{subfigure}{0.48\textwidth}
             \centering
             \includegraphics[width=0.75\textwidth]{fig_04_A.png}
-            \label{fig:fig_04_A}
+            \label{fig_04_A}
         \end{subfigure}
         \begin{subfigure}{0.48\textwidth}
             \centering
             \includegraphics[width=0.75\textwidth]{fig_04_B.png}
-            \label{fig:fig_04_B}
+            \label{fig_04_B}
         \end{subfigure}
         \caption{$\omega$ scan of sample A and B (002) and Gaussian fit}
-        \label{fig:fig_04}
+        \label{fig_04}
     \end{figure}
 
     With FWHM 0.003 for sample A and 0.00016 for sample B, lateral sizes $l_\parallel$ are 149 nm and 2854 nm for sample A and B respectively.
@@ -119,7 +120,7 @@
         \centering
         \includegraphics[width=0.75\textwidth]{fig_05.png}
         \caption{$\omega$ scan of sample A (101) and Gaussian fit}
-        \label{fig:fig_05}
+        \label{fig_05}
     \end{figure}
 
 
@@ -138,7 +139,7 @@
         \centering
         \includegraphics[width=0.75\textwidth]{fig_06.png}
         \caption{$\phi$ scan of sample A $ZnO$ (112) and $Al_2O_3$ (113)}
-        \label{fig:fig_06}
+        \label{fig_06}
     \end{figure}
 
     The $\phi$ scans of the ZnO (112) and $Al_2O_3$ (113) reflections show six peaks separated by $60^\circ$, indicating the hexagonal symmetry of both the film and the substrate. The ZnO peaks are shifted by approximately $30^\circ$ with respect to the sapphire peaks.
@@ -151,8 +152,10 @@
         \centering
         \includegraphics[width=0.75\textwidth]{fig_07.png}
         \caption{RSM of sample B $ZnO$ (205)}
-        \label{fig:fig_07}
+        \label{fig_07}
     \end{figure}
+
+    Lattice constants a and c can be calculated by equation 47 and 48:
 
     \begin{equation}
         a = \frac{1}{q_\parallel (rlu)} \frac{\lambda}{\sqrt{3}} h\\
@@ -164,36 +167,56 @@
         \label{eq48}
     \end{equation}
 
-
-    a = 0.3255 nm, c = 0.3198 nm.
+    where $q_\parallel (rlu)$ and $q_\perp (rlu)$ are scattering vector q components of the peak center in reciprocal lattice units. Experimentally, a = 0.3255 nm, c = 0.3198 nm.
 
     The broadening results from finite lateral crystallite size and tilt of the crystallites.
 
+    The lattice mismatch is defined as:
+
     \begin{equation}
-        \frac{\Delta a}{a} = \frac{a_{substrate}-a^{relax}_{film}}{a_{substrate}}
+        \frac{\Delta a}{a} = \frac{a_{substrate}-a^{relax}_{film}}{a_{substrate}} = \frac{a_{Al_2O_3}-a'_{ZnO}}{a_{Al_2O_3}}
         \label{eq4}
     \end{equation}
 
-    With $a^{relax}_{film} = a_{ZnO} = 3.255 \AA$ from experiment, $a_{substrate} = a_{Al_2O_3} = 4.7577 \AA$ from appendix B, lattice mismatch is 0.3158.
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\textwidth]{fig_07_fromguide.png}
+        \caption{Figure 9 from user guide. Coincidence lattice of $ZnO$ film and $Al_2O_3$ substrate by $30^\circ$ rotation.}
+        \label{fig_07_fromguide}
+    \end{figure}
+
+    Considering coincidence lattice, with $a'_{ZnO} = 2a_{ZnO}\cos 30 ^\circ = 5.638 \AA$ from experiment, and $a_{Al_2O_3} = 4.7577 \AA$ from appendix B, lattice mismatch is 18.5\%. Relation between two lattice constants a is shown in \ref{fig_07_fromguide}.
 
     %8
     \vspace{0.5cm}
-    \textbf{Question 8:} {\it Determine the c-lattice constant of sample C. Why was the 006-reflex instead of the (002) reflex used for this purpose? ...Use this relation with the above determined value for cZnO to calculate the Mg-content of sample C. Estimate the error of the obtained result by assuming that the Equation 
-(49) is accurate.}
+    \textbf{Question 8:} {\it Determine the c-lattice constant of sample C. Why was the 006-reflex instead of the (002) reflex used for this purpose? ...Use this relation with the above determined value for cZnO to calculate the Mg-content of sample C. Estimate the error of the obtained result by assuming that the Equation (49) is accurate.}
+
+    The (006) reflection was used because higher-order reflections appear at larger diffraction angles $\theta$, which improves the accuracy in determining the lattice constant. From equation 39:
+
+    \begin{equation}
+        \frac{\Delta \lambda}{\lambda} = \cot \theta \cdot \theta + \frac{\Delta d_{hkl}}{d_{hkl}}
+        \label{eq39}
+    \end{equation}
+
+    one can see that higher $\theta$ suppresses $\Delta \theta$ term.
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{fig_08.png}
         \caption{$2\theta/\omega$ scan of sample C (006) in unit of $q_{\perp}$}
-        \label{fig:fig_08}
+        \label{fig_08}
     \end{figure}
      
     \ref{eq48}
     \begin{equation}
-        c_{Zn_{1-x}Mg_x O} = c_{ZnO} - X \cdot 0.17 \AA
+        c_{Zn_{1-x}Mg_x O} = c_{ZnO} - x \cdot 0.17 \AA
         \label{eq49}
     \end{equation}
+
+
+
+    
 
 
 \end{document}
