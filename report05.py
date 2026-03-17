@@ -50,3 +50,7 @@ plt.savefig('fig_05.png')
 plt.show()
 plt.close()
 
+with open('value.tex', 'a') as f:
+    f.write('\n')
+    f.write(rf'\renewcommand\reportFIVEfwhm{{{FWHM_omega}}}' + '\n')
+    f.write(rf'\renewcommand\reportFIVEde{{{dislocation_edge}}}' + '\n')

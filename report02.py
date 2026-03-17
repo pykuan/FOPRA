@@ -49,5 +49,5 @@ plt.close()
 
 with open('value.tex', 'a') as f:
     f.write('\n')
-    f.write(rf'\newcommand\reportTWOfwhm{{{FWHM_2theta:.4f}}}' + '\n')
-    f.write(rf'\newcommand\reportTWOlz{{{lz*10**9:.3f}}}' + '\n')
+    f.write(rf'\renewcommand\reportTWOfwhm{{{FWHM_2theta:.4f}}}' + '\n')
+    f.write(rf'\renewcommand\reportTWOlz{{{lz*10**9:.3f}}}' + '\n')

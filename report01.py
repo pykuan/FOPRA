@@ -20,8 +20,8 @@ plt.close()
 
 with open('value.tex', 'a') as f:
     f.write('\n')
-    f.write(rf'\newcommand\reportONEangi{{{angle_peaks[0]:.1f}}}' + '\n')
-    f.write(rf'\newcommand\reportONEangii{{{angle_peaks[2]:.1f}}}' + '\n')
-    f.write(rf'\newcommand\reportONEangiii{{{angle_peaks[4]:.1f}}}' + '\n')
-    f.write(rf'\newcommand\reportONEangix{{{angle_peaks[5]:.1f}}}' + '\n')
-    f.write(rf'\newcommand\reportONEangx{{{angle_peaks[6]:.1f}}}' + '\n')
+    f.write(rf'\renewcommand\reportONEangi{{{angle_peaks[0]:.1f}}}' + '\n')
+    f.write(rf'\renewcommand\reportONEangii{{{angle_peaks[2]:.1f}}}' + '\n')
+    f.write(rf'\renewcommand\reportONEangiii{{{angle_peaks[4]:.1f}}}' + '\n')
+    f.write(rf'\renewcommand\reportONEangix{{{angle_peaks[5]:.1f}}}' + '\n')
+    f.write(rf'\renewcommand\reportONEangx{{{angle_peaks[6]:.1f}}}' + '\n')

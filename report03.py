@@ -56,5 +56,5 @@ plt.close()
 
 with open('value.tex', 'a') as f:
     f.write('\n')
-    f.write(rf'\newcommand\reportTHREEfwhm{{{FWHM_2theta:.4f}}}' + '\n')
-    f.write(rf'\newcommand\reportTHREElz{{{lz*10**9:.3f}}}' + '\n')
+    f.write(rf'\renewcommand\reportTHREEfwhm{{{FWHM_2theta:.4f}}}' + '\n')
+    f.write(rf'\renewcommand\reportTHREElz{{{lz*10**9:.3f}}}' + '\n')

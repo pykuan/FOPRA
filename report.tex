@@ -5,20 +5,25 @@
 \usepackage{amsmath,amssymb}
 \usepackage{float}
 \usepackage{subcaption}
+\usepackage[a4paper,margin=1.5cm]{geometry}
 
 \begin{document}
 \input{value}
 
     \begin{center}
-        \large{\bf{Anisotropic flow analysis with two- and multiparticle correlation techniques}}\\
+        \large{\bf{FOPRA 08: High Resolution X-Ray Diffraction}}\\
     \end{center}
 
     \begin{center}
-        {\small\today}
+        {\small Pei-Ying Kuan 03804170}\\
+        {\small Xianye Xie 03811734}\\
+        {\small Hanyu Zhang 03804373}\\
+        {\small\today}\\
     \end{center}
 
     %1
-    \textbf{Question 1:} {\it Plot the long $2\theta/\omega$ scan of sample B in a logarithmic scale. Which peaks can you identify?} 
+    \textbf{Question 1:} {\it Plot the long $2\theta/\omega$ scan of sample B in a logarithmic scale. Which peaks can you identify?}
+
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{fig_01.png}
@@ -36,9 +41,13 @@
         \item $2\theta = \reportONEangx^{\circ} \rightarrow ZnO$ (006)
     \end{itemize}
 
+    Only (00l) reflection appear, indicating that both $ZnO$ film and $Al_2O_3$ substrate are c-axis oriented.
+
     %2
     \vspace{0.5cm}
     \textbf{Question 2:} {\it Estimate the layer thickness of sample A by using Equation (41).} 
+    \vspace{0.5cm}
+
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{fig_02.png}
@@ -47,16 +56,19 @@
     \end{figure}
 
     According to equation (41): 
+
     \begin{equation}
         l_z=\frac{0.9\lambda}{\Delta(2\theta)\cos\theta}
         \label{eq41}
     \end{equation}
 
-    and $FWHM \approx \reportTWOfwhm$ from Gaussian fit, layer thickness $\reportTWOlz$ is estimated as 130 nm.
+    and $\Delta(2\theta) \approx \reportTWOfwhm$ rad from Gaussian fit, layer thickness $l_z$ is estimated as $\reportTWOlz$ nm.
 
     %3
     \vspace{0.5cm}
-    \textbf{Question 3:} {\it Determine the layer thickness of sample B by using Equations (41) and (42). Compare the obtained values! Conclusion? } 
+    \textbf{Question 3:} {\it Determine the layer thickness of sample B by using Equations (41) and (42). Compare the obtained values! Conclusion?}
+    \vspace{0.5cm}
+
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{fig_03.png}
@@ -64,7 +76,8 @@
         \label{fig_03}
     \end{figure}
 
-    According to equation (41) (equation (\ref{eq41}) in this report) and $FWHM \approx \reportTHREEfwhm$ from Gaussian fit, layer thickness $\reportTHREElz$ is estimated as 452 nm.
+    According to equation (41) (equation (\ref{eq41}) in this report) and $\Delta(2\theta) \approx \reportTHREEfwhm$ rad from Gaussian fit, layer thickness $l_z$ is estimated as $\reportTHREElz$ nm.
+
     Equation (42):
 
     \begin{equation}
@@ -74,12 +87,15 @@
     
     requires the distance between secondary maxima. However, in the measured $2\theta/\omega$ scan of sample B, only a single peak is visible and no clear secondary maxima can be identified. Therefore, equation (42) cannot be applied to this dataset.
 
-    This suggests that the thickness estimate from equation (41) is the only accessible one for sample B from the present measurement.
+    This suggests that the thickness estimated from equation (41) is the only accessible one for sample B from this measurement.
 
     %4
     \vspace{0.5cm}
     \textbf{Question 4:} {\it Estimate the screw-type dislocation densities of samples A and B and their lateral crystallite size. Compare the structural quality of both samples.} 
+    \vspace{0.5cm}
+
     By assuming that the broadening of rocking curve is only caused by limited size, lower limit for the lateral crystallite size $l_\parallel$ can be estimated by:
+
     \begin{equation}
         l_\parallel = \frac{0.9 \lambda}{\Delta \omega \sin \theta}
         \label{eq43}
@@ -101,20 +117,23 @@
         \label{fig_04}
     \end{figure}
 
-    With FWHM 0.003 for sample A and 0.00016 for sample B, lateral sizes $l_\parallel$ are 149 nm and 2854 nm for sample A and B respectively.
+    With $\Delta \omega = \reportFOURfwhmA$ rad for sample A and $\reportFOURfwhmB$ rad for sample B, lateral sizes $l_\parallel$ are $\reportFOURlxyA$ nm and $\reportFOURlxyB$ nm for sample A and B respectively.
     
     By assuming that the broadening of the rocking curves result only from tilt and twist, equation (45) suggests the relation between screw-type dislocation density $\rho_{screw}$ and FWHM $\Delta \omega_{002}$:
+
     \begin{equation}
         \rho_{screw} = \frac{\Delta \omega_{002}^2}{4.35 |\mathbf{b}_{screw}|^2}
         \label{eq45}
     \end{equation}
-    with the Burger vector $\mathbf{b}_{screw}=[001]$ which equals to lattice constance $c = 5.2024 \AA$. $\rho_{screw}$ are $8.38 \times 10^{12} m^{-2}$ and $2.29 \times 10^{10} m^{-2}$. 
+
+    with the Burger vector $\mathbf{b}_{screw}=[001]$ which equals to lattice constant $c = 5.2024 \AA$. $\rho_{screw}$ are $\reportFOURdsA \times 10^{12} m^{-2}$ and $\reportFOURdsB \times 10^{10} m^{-2}$. 
     
     Therefore, sample B has a much larger lateral crystallite size and a much lower screw-type dislocation density than sample A, indicating a better structural quality.
 
     %5
     \vspace{0.5cm}
     \textbf{Question 5:} {\it Estimate the edge-type dislocation density of sample A.} 
+    \vspace{0.5cm}
 
     \begin{figure}[H]
         \centering
@@ -123,17 +142,19 @@
         \label{fig_05}
     \end{figure}
 
-
     By assuming that the broadening of the rocking curves result only from tilt and twist, equation (46) suggests the relation between edge-type dislocation density $\rho_{edge}$ and FWHM $\Delta \omega_{101}$:
+
     \begin{equation}
         \rho_{edge} = \frac{\Delta \omega_{101}^2}{4.35 |\mathbf{b}_{edge}|^2}
         \label{eq46}
     \end{equation}
-    with the Burger vector $\mathbf{b}_{edge}=[110]$ which equals to lattice constance $a = 3.2475 \AA$. However, no broadening is identified in this dataset, which gives 0 FWHM. This suggests that sample A has zero edge-type dislocation density.
+
+    with the Burgers vector $\mathbf{b}_{edge}=[110]$ which equals to lattice constance $a = 3.2475 \AA$. However, no broadening is identified in this dataset, which gives 0 FWHM. This suggests that sample A has zero edge-type dislocation density.
 
     %6
     \vspace{0.5cm}
     \textbf{Question 6:} {\it Illustrate graphically which lattice planes are associated with the (112) and the (113) reflexes respectively. Verify the epitaxial relation of ZnO on a c-plane sapphire substrate.} 
+    \vspace{0.5cm}
 
     \begin{figure}[H]
         \centering
@@ -147,6 +168,7 @@
     %7
     \vspace{0.5cm}
     \textbf{Question 7:} {\it Determine the peak center of the ZnO (205) reflex. Determine the a- and c-lattice constants of sample B. Which mechanisms can you identify for the broadening of its (205) reflex? Calculate the lattice mismatch by assuming that the ZnO film on the sapphire substrate is fully relaxed and by taking into account the formation of a coincidence lattice. } 
+    \vspace{0.5cm}
 
     \begin{figure}[H]
         \centering
@@ -155,7 +177,7 @@
         \label{fig_07}
     \end{figure}
 
-    Lattice constants a and c can be calculated by equation 47 and 48:
+    Lattice constants a and c can be calculated by equation (47) and (48):
 
     \begin{equation}
         a = \frac{1}{q_\parallel (rlu)} \frac{\lambda}{\sqrt{3}} h\\
@@ -167,7 +189,7 @@
         \label{eq48}
     \end{equation}
 
-    where $q_\parallel (rlu)$ and $q_\perp (rlu)$ are scattering vector q components of the peak center in reciprocal lattice units. Experimentally, a = 0.3255 nm, c = 0.3198 nm.
+    where $q_\parallel (rlu)$ and $q_\perp (rlu)$ are scattering vector q components of the peak center in reciprocal lattice units. Experimentally, a = $\reportSEVENa$ nm, c = $\reportSEVENc$ nm.
 
     The broadening results from finite lateral crystallite size and tilt of the crystallites.
 
@@ -186,13 +208,14 @@
         \label{fig_07_fromguide}
     \end{figure}
 
-    Considering coincidence lattice, with $a'_{ZnO} = 2a_{ZnO}\cos 30 ^\circ = 5.638 \AA$ from experiment, and $a_{Al_2O_3} = 4.7577 \AA$ from appendix B, lattice mismatch is 18.5\%. Relation between two lattice constants a is shown in \ref{fig_07_fromguide}.
+    Considering coincidence lattice, with effective lattice constant along coincidence direction $a'_{ZnO} = 2a_{ZnO}\cos 30 ^\circ = \reportSEVENap$ nm from experiment, and $a_{Al_2O_3} = 0.47577$ nm from appendix B, lattice mismatch is $\reportSEVENmismatch\%$. Relation between two lattice constants a is shown in \ref{fig_07_fromguide}.
 
     %8
     \vspace{0.5cm}
     \textbf{Question 8:} {\it Determine the c-lattice constant of sample C. Why was the 006-reflex instead of the (002) reflex used for this purpose? ...Use this relation with the above determined value for cZnO to calculate the Mg-content of sample C. Estimate the error of the obtained result by assuming that the Equation (49) is accurate.}
+    \vspace{0.5cm}
 
-    The (006) reflection was used because higher-order reflections appear at larger diffraction angles $\theta$, which improves the accuracy in determining the lattice constant. From equation 39:
+    The (006) reflection was used because higher-order reflections appear at larger diffraction angles $\theta$, which improves the accuracy in determining the lattice constant. From equation (39):
 
     \begin{equation}
         \frac{\Delta \lambda}{\lambda} = \cot \theta \cdot \theta + \frac{\Delta d_{hkl}}{d_{hkl}}
@@ -204,19 +227,44 @@
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\textwidth]{fig_08.png}
-        \caption{$2\theta/\omega$ scan of sample C (006) in unit of $q_{\perp}$}
+        \caption{$2\theta/\omega$ scan of sample C (006) as function of $q_{\perp}$}
         \label{fig_08}
     \end{figure}
-     
-    \ref{eq48}
+
+    Calculate c using equation (\ref{eq48}), by converting $2\theta$ into $q_{\perp}$:
+
+    \begin{equation}
+        q_{\perp} = \frac{2\pi}{\lambda}(\cos(2\theta-\omega)-\cos\omega)
+        \label{eq31}
+    \end{equation}
+
+    The experimental data shows $c = \reportEIGHTc$ nm.
+    
+    Using the relation between c-lattice constant and the Mg-content x for $Zn_{1-x}Mg_xO$ by Sadofev et al. \cite{bib4}:
+
     \begin{equation}
         c_{Zn_{1-x}Mg_x O} = c_{ZnO} - x \cdot 0.17 \AA
         \label{eq49}
     \end{equation}
 
+    The experimental data shows $x = \reportEIGHTx\ \pm\ \reportEIGHTdx \times 10^{-5}$. The error is calculated by error propagation:
 
+    \begin{equation}
+        \delta x = \frac{\partial x}{\partial q_{\perp ,peak}} \delta q_{\perp ,peak} =\frac{2 \pi l}{0.17 q_{\perp ,peak}^2} \delta q_{\perp ,peak}
+        \label{error_prop}
+    \end{equation}
 
-    
+\begin{thebibliography}{99}
+
+    \bibitem{bib4}
+    S. Sadofev, S. Blumstengel, J. Cui, J. Puls, S. Rogaschewski, P. Schäfer, Y. G. Sadofyev, and F. Henneberger,
+    \emph{Growth of high-quality ZnMgO epilayers and ZnO/ZnMgO quantum well structures by radical-source molecular-beam epitaxy on sapphire.} 
+    Applied Physics Letters,
+    87:091903,
+    2005. 
+
+\end{thebibliography}
+
 
 
 \end{document}

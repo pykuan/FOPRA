@@ -66,13 +66,24 @@ c = (1/qz0) * (wavelength*l/2)
 print(abs(a))
 print(abs(c)) #nm
 
+aprime = 2*a*np.cos(np.pi/6)
+print(abs(aprime))
+
 plt.contourf(QX, QZ, intensity_grid, levels=20, cmap='viridis')
 plt.scatter(qx0, qz0, color='red', label='peak', s=1)
-plt.colorbar(label='log10(I/Imax)')
-plt.xlabel('qx')
-plt.ylabel('qz')
+plt.colorbar(label=r'$log_{10}$ ($I/I_{max}$)')
+plt.xlabel(r'$q_x$')
+plt.ylabel(r'$q_z$')
 plt.legend()
 plt.savefig('fig_07.png')
 plt.show()
 plt.close()
 
+mismatch = (abs(aprime)-0.47577)/0.47577 *100
+
+with open('value.tex', 'a') as f:
+    f.write('\n')
+    f.write(rf'\renewcommand\reportSEVENa{{{abs(a):.4f}}}' + '\n')
+    f.write(rf'\renewcommand\reportSEVENc{{{abs(c):.4f}}}' + '\n')
+    f.write(rf'\renewcommand\reportSEVENap{{{abs(aprime):.4f}}}' + '\n')
+    f.write(rf'\renewcommand\reportSEVENmismatch{{{mismatch:.1f}}}' + '\n')
